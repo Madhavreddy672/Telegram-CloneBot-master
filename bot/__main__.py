@@ -9,7 +9,7 @@ from bot.clone_status import CloneStatus
 from bot.msg_utils import deleteMessage, sendMessage
 import time
 
-REPO_LINK = "https://github.com/jagrit007/Telegram-CloneBot"
+REPO_LINK = "https://t.Me/Thunder_Mirror_Group"
 # Soon to be used for direct updates from within the bot.
 
 @run_async
@@ -27,7 +27,7 @@ def helper(update, context):
             "\n\nYou can also *ignore folders* from clone process by doing the following:\n" \
                 "`/clone <FOLDER_ID> [DESTINATION] [id1,id2,id3]`\n In this example: id1, id2 and id3 would get ignored from cloning\nDo not use <> or [] in actual message." \
                     "*Make sure to not put any space between commas (,).*\n" \
-                        f"Source of this bot: [GitHub]({REPO_LINK})", context.bot, update, 'Markdown')
+                        f"Source of this bot: [Team Thunders]({REPO_LINK})", context.bot, update, 'Markdown')
 
 # TODO Cancel Clones with /cancel command.
 @run_async
@@ -67,7 +67,7 @@ def sendCloneStatus(update, context, status, msg, link):
     while not status.done():
         sleeper(3)
         try:
-            text=f'🔗 *Cloning:* [{status.MainFolderName}]({status.MainFolderLink})\n━━━━━━━━━━━━━━\n🗃️ *Current File:* `{status.get_name()}`\n⬆️ *Transferred*: `{status.get_size()}`\n📁 *Destination:* [{status.DestinationFolderName}]({status.DestinationFolderLink})'
+            text=f'🔗 *Cloning:* [{status.MainFolderName}]({status.MainFolderLink})\n━━━━━━━━━━━━━━\n🗃︄1�7 *Current File:* `{status.get_name()}`\n⬆️ *Transferred*: `{status.get_size()}`\n📁 *Destination:* [{status.DestinationFolderName}]({status.DestinationFolderLink})'
             if status.checkFileStatus():
                 text += f"\n🕒 *Checking Existing Files:* `{str(status.checkFileStatus())}`"
             if not text == old_text:
